@@ -1,0 +1,38 @@
+{
+  "name": "kings-cup",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.8",
+    "jest-expo": "~20.0.0",
+    "react-native-scripts": "1.3.1",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "web": "node_modules/.bin/webpack-dev-server --config webpack.dev.js"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-expo": "^3.0.0",
+    "expo": "^20.1.3",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "path": "^0.12.7",
+    "react": "15.6",
+    "react-dom": "15.6",
+    "react-native": "^0.47.2",
+    "react-native-web": "^0.0.125",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2",
+    "webpack-merge": "^4.1.0"
+  }
+}
