@@ -3,10 +3,12 @@ import { RANKS, SUITS } from './constants'
 
 export default class Deck {
   constructor() {
-    this.decks = shuffle([].concat.apply([], RANKS.map(rank => SUITS.map(suit => ({rank, suit})))))
+    this.deck = shuffle([].concat.apply([], RANKS.map(rank => SUITS.map(suit => ({rank, suit})))));
+    this.topCard = this.getNextCard();
   }
 
   getNextCard() {
-    return this.decks.pop();
+    this.topCard = this.deck.pop();
+    return this.topCard;
   }
 }
