@@ -5,4 +5,8 @@ export default class Deck {
 
     this.decks = [].concat.apply([], ranks.map(rank => suits.map(suit => ({rank, suit}))));
   }
+
+  getNextCard() {
+    return this.decks.pop();
+  }
 }
