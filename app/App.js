@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Deck from "./Deck";
+import PlayingCard from './PlayingCard';
 
 export default class App extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class App extends Component {
         <Text>Open up App.js to start working on your app!</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
+        <PlayingCard rank='5' suit='J'></PlayingCard>
       </View>
     );
   }
