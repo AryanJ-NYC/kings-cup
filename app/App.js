@@ -4,9 +4,14 @@ import Deck from "./Deck";
 import PlayingCard from './PlayingCard';
 
 export default class App extends Component {
-  render() {
-    const deck = new Deck();
+  constructor() {
+    super();
+    this.state = {
+      deck: new Deck(),
+    }
+  }
 
+  render() {
     return (
       <View style={styles.container}>
         <Text>Open up App.js to start working on your app!</Text>
