@@ -1,5 +1,25 @@
-export const RANKS = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K"];
-export const SUITS = ["S", "H", "C", "D"];
+export const RANKS = {
+  'A': 'Ace',
+  '2': 'Deuce',
+  '3': 'Three',
+  '4': 'Four',
+  '5': 'Five',
+  '6': 'Six',
+  '7': 'Seven',
+  '8': 'Eight',
+  '9': 'Nine',
+  'T': 'Ten',
+  'J': 'Jack',
+  'Q': 'Queen',
+  'K': 'King',
+};
+
+export const SUITS = {
+  'S': 'Spades',
+  'H': 'Hearts',
+  'C': 'Clubs',
+  'D': 'Diamonds',
+};
 
 export const RULES = {
   "A": {

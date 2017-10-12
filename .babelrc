@@ -2,7 +2,7 @@
   "presets": ["react-native", "babel-preset-expo"],
   "env": {
     "development": {
-      "plugins": ["transform-react-jsx-source"],
+      "plugins": ["transform-react-jsx-source", "react-native-web/babel"],
     }
   }
 }

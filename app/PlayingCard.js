@@ -1,12 +1,13 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import { Image } from 'react-native';
+import { SUITS } from './constants'
 
 function PlayingCard({rank, suit}) {
-  return (
-    <View>
-      <Text>Card {rank} {suit}</Text>
-    </View>
-  )
+  const suitName = SUITS[suit].toLowerCase();
+  return <Image
+      source={require(`./assets/cards/${rank}_of_${suitName}.png`)}
+      style={{width: 222, height: 323, resizeMode: "contain"}}
+    />
 }
 
 export default PlayingCard;
