@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native';
 import Deck from "./Deck";
 import PlayingCard from './PlayingCard';
 import Rule from './Rule';
@@ -7,20 +7,29 @@ import Rule from './Rule';
 export default class App extends Component {
   constructor() {
     super();
+    this.deck = new Deck();
     this.state = {
-      deck: new Deck(),
-    }
+      topCard: this.deck.topCard,
+    };
+    this.handlePress = this.handlePress.bind(this);
+  }
+
+  handlePress() {
+    this.setState({ topCard: this.deck.getNextCard() });
   }
 
   render() {
-    const {rank, suit} = this.state.deck.topCard;
+    const {rank, suit} = this.state.topCard;
 
     return (
       <View style={styles.container}>
-        <View style={{ alignContent: 'center', width: 323, flexDirection: 'column' }}>
-          <PlayingCard rank={rank} suit={suit} />
-          <Rule rank={rank} />
-        </View>
+        <Text>Cards Remaining: {this.deck.deck.length}</Text>
+        <TouchableWithoutFeedback onPress={this.handlePress}>
+          <View style={{ alignContent: 'center', width: 323, flexDirection: 'column' }}>
+            <PlayingCard rank={rank} suit={suit} />
+            <Rule rank={rank} />
+          </View>
+        </TouchableWithoutFeedback>
       </View>
     );
   }
