@@ -25,7 +25,7 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text>Cards Remaining: {this.deck.deck.length}</Text>
         <TouchableWithoutFeedback onPress={this.handlePress}>
-          <View style={{ alignContent: 'center', width: 323, flexDirection: 'column' }}>
+          <View style={{ alignContent: 'center', flexDirection: 'column' }}>
             <PlayingCard rank={rank} suit={suit} />
             <Rule rank={rank} />
           </View>
