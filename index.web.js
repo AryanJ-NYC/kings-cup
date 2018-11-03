@@ -1,6 +1,5 @@
-import React from "react";
 import { AppRegistry } from "react-native";
-import App from "./app/App";
+import App from "./App";
 
 /* eslint-disable no-undef */
 AppRegistry.registerComponent("App", () => App);

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native';
-import Deck from "./Deck";
-import PlayingCard from './PlayingCard';
-import Rule from './Rule';
+import Deck from "./app/Deck";
+import PlayingCard from './app/PlayingCard';
+import Rule from './app/Rule';
 
 export default class App extends Component {
   constructor() {
@@ -25,7 +25,7 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text>Cards Remaining: {this.deck.deck.length}</Text>
         <TouchableWithoutFeedback onPress={this.handlePress}>
-          <View style={{ alignContent: 'center', flexDirection: 'column', maxWidth: '50%' }}>
+          <View style={{ maxWidth: '50%' }}>
             <PlayingCard rank={rank} suit={suit} />
             <Rule rank={rank} />
           </View>
@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#fff',
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'end',
   },
 });

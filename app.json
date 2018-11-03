@@ -1,5 +1,9 @@
 {
   "expo": {
-    "sdkVersion": "20.0.0"
+    "assetBundlePatterns": [ "app/assets/**" ],
+    "name": "Kings Cup",
+    "slug": "kings-cup",
+    "sdkVersion": "31.0.0",
+    "privacy": "public"
   }
 }

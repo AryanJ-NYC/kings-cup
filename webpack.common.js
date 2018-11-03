@@ -23,7 +23,7 @@ module.exports = {
           loader: "babel-loader",
           query: {
             cacheDirectory: true,
-            presets: ["react-native"],
+            presets: ["module:metro-react-native-babel-preset"],
           },
         },
       },
@@ -35,7 +35,7 @@ module.exports = {
           loader: "babel-loader",
           query: {
             cacheDirectory: true,
-            presets: ["react-native"],
+            presets: ["module:metro-react-native-babel-preset"],
           },
         },
       },
@@ -66,7 +66,7 @@ module.exports = {
   resolve: {
     // Maps the 'react-native' import to 'react-native-web'.
     alias: {
-      "react-native": "react-native-web",
+      "react-native$": "react-native-web",
     },
     modules: [path.join(__dirname, "node_modules"), path.resolve(APP_DIR)],
     extensions: [".js", ".web.js"],
