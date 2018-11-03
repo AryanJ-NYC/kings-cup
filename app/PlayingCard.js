@@ -6,7 +6,7 @@ import { SUITS } from './constants'
 function PlayingCard({rank, suit}) {
   const suitName = SUITS[suit].toLowerCase();
   return (
-    <View style={{ alignSelf: 'center', borderWidth: 'hairline', borderRadius: '12px' }}>
+    <View style={{ alignSelf: 'center', borderWidth: 1, borderRadius: 12 }}>
       <Image
         source={cards[suitName][rank]}
         style={{width: 222, height: 323, resizeMode: "contain"}}
