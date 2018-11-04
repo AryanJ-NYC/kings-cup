@@ -2,6 +2,7 @@
   "name": "kings-cup",
   "version": "0.1.0",
   "main": "node_modules/expo/AppEntry.js",
+  "repository": "https://github.com/AryanJ-NYC/kings-cup",
   "scripts": {
     "start": "expo start -c",
     "build": "node_modules/.bin/webpack --config webpack.common.js",
